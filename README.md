@@ -17,13 +17,20 @@
   * [Contribute](#contribute)
   * [Tests](#tests)
   * [Questions](#questions)
- 
+
+
+## Updated Portfolio
+
+  This Google Books API Search & Save app is featured on my updated portfolio, which you can find here:
+
+  [Susan Fujii Updated Portfolio](https://srfujii.github.io/UpdatedPortfolio_React/)
+  
 
 ## Installation
 
-  This app is deployed live on Heroku, and you can find it live here:
+  This Google Books API Search & Save app is also deployed live on Heroku, and you can find it live here:
 
-  [Live Deployed Application](https://srfujii.github.io/UpdatedPortfolio_React/)
+  [Live Deployed Application](https://murmuring-citadel-81538.herokuapp.com/)
   
 
   To install locally, do the following: 
