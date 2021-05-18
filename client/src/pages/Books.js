@@ -34,13 +34,27 @@ function Books() {
         for (let i = 0; i < myBooksArray.length; i++) {
           let myBookObj = {
             key: myBooksArray[i].id,
-            id: myBooksArray[i].id,
-            // authors: myBooksArray[i].volumeInfo.authors,
-            description: myBooksArray[i].volumeInfo.description,
-            link: myBooksArray[i].volumeInfo.infoLink,
-            title: myBooksArray[i].volumeInfo.title
+            id: myBooksArray[i].id
           }
           
+          if (!(myBooksArray[i].volumeInfo.title) || (myBooksArray[i].volumeInfo.title === undefined)) {
+            myBookObj.title = "Title coming soon...";
+          } else {
+            myBookObj.title = myBooksArray[i].volumeInfo.title;
+          }
+
+          if (!(myBooksArray[i].volumeInfo.description) || (myBooksArray[i].volumeInfo.description === undefined)) {
+            myBookObj.description = "Description coming soon...";
+          } else {
+            myBookObj.description = myBooksArray[i].volumeInfo.description;
+          }
+
+          if (!(myBooksArray[i].volumeInfo.infoLink) || (myBooksArray[i].volumeInfo.infoLink === undefined)) {
+            myBookObj.infoLink = "#";
+          } else {
+            myBookObj.infoLink = myBooksArray[i].volumeInfo.infoLink;
+          } 
+
           if (!(myBooksArray[i].volumeInfo.imageLinks) || (myBooksArray[i].volumeInfo.imageLinks === undefined)) {
             myBookObj.image = "https://via.placeholder.com/300";
           } else {
@@ -52,7 +66,6 @@ function Books() {
           } else {
             myBookObj.authors = myBooksArray[i].volumeInfo.authors;
           } 
-
           myNewBooksArray.push(myBookObj);
         }
         setBooks(myNewBooksArray);
